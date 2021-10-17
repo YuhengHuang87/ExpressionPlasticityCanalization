@@ -1,9 +1,10 @@
 # ExpressionPlasticityCanalization
 prepare the data
-  1. run remove_rRNA_combine_RPM_median_depth_200.pl for flitering expression abundance based on read counts
-  2. run total_count_per_cluster.pl to calculate the total splicing events per cluster
-  3. run screen_intron_alternative_count.pl to screen for minimal splicing events and combine total events with each event
-  4. run combine_cold_warm_condition_count_exp_intron.pl to combine data from different temperature conditions
+  1. download the raw count data from Table S3. Save them as .txt files in a working folder with the codes below.
+  2. run remove_rRNA_combine_RPM_median_depth_200.pl for flitering expression abundance based on read counts
+  3. run total_count_per_cluster.pl to calculate the total splicing events per cluster
+  4. run screen_intron_alternative_count.pl to screen for minimal splicing events and combine total events with each event
+  5. run combine_cold_warm_condition_count_exp_intron.pl to combine data from different temperature conditions
   
 I. plasticity analysis
   1. run simulation_plasticity_null_proportion.R to confirm our approach of identifying consistent plasticity
