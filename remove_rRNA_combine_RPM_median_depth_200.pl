@@ -14,9 +14,9 @@ open(OUT1, ">$outfile1");
 my %RPM;
 for ($f = 2; $f < 50; $f++){
   #print "$f\n";
-$files="cold_RSEM_combined_count.txt";
+$files="expression_count_cold_condition";
 my $sum_count=0; my $sum_count_length_tpm=0;
-  open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
 	while(my $count = <I>){
   	chomp($count);
 if($count =~ m/FBgn/){
@@ -28,7 +28,7 @@ $sum_count+=$b[$f];
 }
 #print "$sum_count\n";
 
- open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
 	while(my $count = <I>){
   	chomp($count);
 if($count =~ m/FBgn/){
@@ -46,7 +46,7 @@ if (exists $RPM{$ID}){
 }
 
 my $line=0; my $screen=0;
-open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
  while(my $count = <I>){
    chomp($count);
 if($count =~ m/FBgn/){
@@ -77,9 +77,9 @@ open(OUT1, ">$outfile1");
 my %RPM_warm;
 for ($f = 2; $f < 50; $f++){
   #print "$f\n";
-$files="warm_RSEM_combined_count.txt";
+$files="expression_count_warm_condition";
 my $sum_count=0; my $sum_count_length_tpm=0;
-  open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
 	while(my $count = <I>){
   	chomp($count);
 if($count =~ m/FBgn/){
@@ -91,7 +91,7 @@ $sum_count+=$b[$f];
 }
 #print "$sum_count\n";
 
- open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
 	while(my $count = <I>){
   	chomp($count);
 if($count =~ m/FBgn/){
@@ -109,7 +109,7 @@ if (exists $RPM_warm{$ID}){
 }
 
 $line=0; $screen=0;
-open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
  while(my $count = <I>){
    chomp($count);
 if($count =~ m/FBgn/){
@@ -136,9 +136,9 @@ open(OUT1, ">$outfile1");
 my %RPM_OUT_IN;
 for ($f = 2; $f < 50; $f++){
   #print "$f\n";
-$files="Outbred_Inbred_RSEM_combined_count.txt";
+$files="Outbred_Inbred_expression_count";
 my $sum_count=0; my $sum_count_length_tpm=0;
-  open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
 	while(my $count = <I>){
   	chomp($count);
 if($count =~ m/FBgn/){
@@ -150,7 +150,7 @@ $sum_count+=$b[$f];
 }
 #print "$sum_count\n";
 
- open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
 	while(my $count = <I>){
   	chomp($count);
 if($count =~ m/FBgn/){
@@ -168,7 +168,7 @@ if (exists $RPM_OUT_IN{$ID}){
 }
 
 $line=0; $screen=0;
-open I, "</mnt/sas0/AD/yhuang349/expression_counts/$files" or print "Can't open /$file\n";
+open(I,"<$files")||die"$!";
  while(my $count = <I>){
    chomp($count);
 if($count =~ m/FBgn/){
