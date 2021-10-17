@@ -9,7 +9,7 @@ my $outfile="total_Intron_count_gene_reads_".$condition;
 open(OUT, ">$outfile");
 
 my %hash1;my %hash2;my %hash4;my %hash3;
-my $infile1="intron_count_".$condition.".txt";
+my $infile1="intron_usage_".$condition."_condition";
 for (my $j = 1; $j <= 48; $j++){
 open(FILE1,"<", "$infile1")||die"$!";
 	while(my $count = <FILE1>){
@@ -59,7 +59,7 @@ close OUT;
 my $outfile="total_Intron_count_gene_reads_outbred_inbred";
 open(OUT, ">$outfile");
 my %hash1;my %hash2;my %hash4;my %hash3;
-my $infile1="intron_count_outbred_inbred";
+my $infile1="Outbred_inbred_intron_usage";
 for (my $j = 1; $j <= 48; $j++){
 open(FILE1,"<", "$infile1")||die"$!";
 	while(my $count = <FILE1>){
