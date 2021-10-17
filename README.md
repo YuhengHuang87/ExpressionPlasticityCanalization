@@ -1,6 +1,6 @@
 # ExpressionPlasticityCanalization
 prepare the data
-  1. download the raw count data from Table S3. Save them as .txt files in a working folder with the codes below.
+  1. copy the raw count data from Table S3. Save them in a working folder with the codes.
   2. run remove_rRNA_combine_RPM_median_depth_200.pl for flitering expression abundance based on read counts
   3. run total_count_per_cluster.pl to calculate the total splicing events per cluster
   4. run screen_intron_alternative_count.pl to screen for minimal splicing events and combine total events with each event
