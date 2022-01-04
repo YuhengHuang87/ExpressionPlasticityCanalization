@@ -69,7 +69,9 @@ if (@a == 48){
 }}}}}
 print "$line\t","$screen\n";
 
-$outfile="warm_RPM_rRNA_removed";
+#$outfile="warm_RPM_rRNA_removed";
+$outfile="warm_RPM_rRNA_removed_median_count_200";
+
 open(OUT, ">$outfile");
 $outfile1="warm_median_count_all";
 open(OUT1, ">$outfile1");
@@ -123,9 +125,11 @@ if (@a == 48){
   $line++;
   my $median_count=median(@a);
   my $avg_count=average(@a);
+    if ($median_count>200){
   print OUT1 "$ID\t","$median_count\n";
     $screen++;
     print OUT "$ID\t","$RPM_warm{$ID}\n";
+    }
 }}}}}
 print "$line\t","$screen\n";
 
