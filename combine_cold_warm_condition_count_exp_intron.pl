@@ -39,7 +39,8 @@ $shared_line=0; $cold_line=0; $warm_line=0;
 $outfile="cold_warm_comb_RPM_rRNA_removed_median_count_200";
 open(OUT, ">$outfile");
 my %warm_exp;
-$infile="warm_RPM_rRNA_removed";
+#$infile="warm_RPM_rRNA_removed";
+$infile="warm_RPM_rRNA_removed_median_count_200";
 open(FILE1,"<$infile")||die"$!";
 	while(my $count = <FILE1>){
 		chomp($count);
